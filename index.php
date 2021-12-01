@@ -43,14 +43,29 @@
 					<form name='send' id='send' action='verstuurd2.php' method='post'>
 						<div class='form-group'>
 							<label for='word'>typen:</label>
-							<input name='vraag' id='vraag' type='text' class='form-control' placeholder='...' style='cursor:text; background-color:#fff;' onfocus='this.removeAttribute("readonly");' readonly required />
+							<input name='vraag' id='vraag' type='text' class='form-control' placeholder='live chat' style='cursor:text; background-color:#fff;' onfocus='this.removeAttribute("readonly");' readonly required />
 							<button>vraag</button>
 						</div>
 					</form>
-					<hr/>
-				<hr/>
+					<br>
+					standard vragen:
+					<!-- 
+						
+					 -->
+					<form name='standard_question' id='standard_question' action='questions.php' method='post'>
+						<button name='standard_question' id='standard_question' 
+						value="1">
+						wat doe ik als mijn kind ziek is?
+					</button>
+					</form>
+					<form name='standard_question' id='standard_question' action='questions.php' method='post'>
+						<button name='standard_question' id='standard_question' 
+						value="2">
+						hoe zien de roosters er uit?
+					</button>
+					</form>
 			<hr>
-		<h1>vraag en antwoord:</h1>
+		<h1>live chat:</h1>
 	<br>
 <?php
 	$val = "";
@@ -65,19 +80,21 @@
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		}
-
+	
 			$sql = "SELECT * FROM vragen ORDER BY id DESC";
 			if ($result = $conn->query($sql)) {
 				$str = "<lu style='list-style-type:none; margin:0; padding:0; margin-top:60px'>";
 				while ($row = $result->fetch_assoc()) {
 			 
-				  $str .= "<li><div style='border:1px gray; margin:3px; padding:2px; height: 100px; font-size: xx-large;'>" .  $row['vraag'] . "<hr>". "</div></li>";
+				  $str .= "<li><div style='border:1px gray; margin:3px; padding:2px; height: 100px; font-size: xx-large;'>" .  $row['vraag'] . "<hr>". "</div></li> <br> <br> <br>";
 				}
 				$str .= "</lu>";
 
 			$result->free();
 			}
+		
 	$conn->close();
+		
 ?>
  <div><?php echo $str; ?></div>
 
