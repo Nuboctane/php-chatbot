@@ -1,0 +1,26 @@
+#bot_message {
+    background-color: rgb(44, 149, 235);
+    border-radius: 0px 50px 50px 50px;
+    padding: 15px;
+    width: 45%;
+}
+
+#user_message{
+    background-color: rgb(255, 115, 21);
+    border-radius: 50px 0px 50px 50px;
+    padding: 15px;
+    width: 25%;
+    float: right;
+}
+
+#icon_bubble{
+    background-color: rgb(44, 149, 235);
+    border-radius: 100px;
+    padding: 15px;
+}
+
+#chat_list{
+    background-color: rgb(133, 141, 148);
+    border-radius: 20px;
+    padding: 15px;
+}

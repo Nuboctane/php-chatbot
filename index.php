@@ -12,7 +12,7 @@
 		//connected
 	}
 
-	$sql = "SELECT * FROM vragen";
+	$sql = "SELECT * FROM vragen2";
 	if ($result = $conn->query($sql)) {
 	  $str = "<lu style='list-style-type:none; margin:0; padding:0; margin-top:60px'>";
 	  $str .= "</lu>";
@@ -30,7 +30,7 @@
 	<meta name='description' content='bad word filter'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<meta http-equiv='x-ua-compatible' content='ie=edge'>
-	<link href='css/bootstrap.min.css' rel='stylesheet'>
+	<link rel='stylesheet' href="styling/style.css">
 	<title>chat bot</title>
 </head>
 <body>
@@ -63,6 +63,11 @@
 						value="2">
 						hoe zien de roosters er uit?
 					</button>
+					<form name='standard_question' id='standard_question' action='questions.php' method='post'>
+						<button name='standard_question' id='standard_question' 
+						value="3">
+						Hoe zit het met vakanties en/of studiedagen?
+					</button>
 					</form>
 			<hr>
 		<h1>live chat:</h1>
@@ -81,12 +86,12 @@
 			die("Connection failed: " . $conn->connect_error);
 		}
 	
-			$sql = "SELECT * FROM vragen ORDER BY id DESC";
+			$sql = "SELECT * FROM vragen2 ORDER BY id DESC";
 			if ($result = $conn->query($sql)) {
 				$str = "<lu style='list-style-type:none; margin:0; padding:0; margin-top:60px'>";
 				while ($row = $result->fetch_assoc()) {
 			 
-				  $str .= "<li><div style='border:1px gray; margin:3px; padding:2px; height: 100px; font-size: xx-large;'>" .  $row['vraag'] . "<hr>". "</div></li> <br> <br> <br>";
+				  $str .= "<li><div style='border:1px gray; margin:3px; padding:2px;  font-size: xx-large;'>" . '</span>' .'<br>' .  $row['vraag'] . "</div></li> <br> <br> <br>";
 				}
 				$str .= "</lu>";
 
@@ -96,7 +101,7 @@
 	$conn->close();
 		
 ?>
- <div><?php echo $str; ?></div>
+ <div id="chat_list"><?php echo $str; ?></div>
 
 				</div>	
 			</div>
