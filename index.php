@@ -70,7 +70,7 @@
 					</button>
 					</form>
 			<hr>
-		<h1>live chat:</h1>
+		<h1 id="header">live chat:</h1>
 	<br>
 <?php
 	$val = "";

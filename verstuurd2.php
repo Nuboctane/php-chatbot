@@ -2,7 +2,7 @@
       include_once 'config/database.php';
       $db = new Database();
       $conn = $db->getConnection();
-$my_str ='<span id="icon_bubble" style="background-color: rgb(255, 115, 21);float: right; ">USER</span><br><br><div id="user_message">' . $_POST["vraag"] . '</div>';
+$my_str ='<span id="icon_bubble" style="background-color: rgb(250, 156, 93);float: right; ">USER</span><br><br><div id="user_message">' . $_POST["vraag"] . '</div>';
 
 
 $sql = "INSERT INTO `vragen2`(`vraag`, `user`) VALUES ('$my_str', 'USER')";

@@ -7,14 +7,28 @@
     $answer = '~';
     
 if ($question == 1){
-    $answer = '<span id="icon_bubble" style="background-color: rgb(44, 149, 235); ">BOT</span><br><br><div id="bot_message"><div id="bot_message">Wat te doen als uw kind ziek is?
+    $my_str ='<span id="icon_bubble" style="background-color: rgb(250, 156, 93);float: right; ">USER</span><br><br><div id="user_message">Wat doe ik als mijn kind ziek is?</div>';
+    $sql2 = "INSERT INTO `vragen2`(`vraag`, `user`) VALUES ('$my_str', 'USER')";
+    if ($conn->query($sql2) === TRUE) {
+        header("Location: index.php");
+     } else {
+        echo "Error: " . $sql2 . "<br>" . $conn->error;
+     }
+    $answer = '<span id="icon_bubble" style="background-color: rgb(107, 184, 246); ">BOT</span><br><br><div id="bot_message"><div id="bot_message">Wat te doen als uw kind ziek is?
     U kunt de school zelf bellen op het ziek meld nummer: 030 280 70 86
     en u zal worden doorverwezen om zelf uw kind ziek te melden aan de telefoon. 
     </div>';
 }
 
 if ($question == 2){
-    $answer = '<span id="icon_bubble" style="background-color: rgb(44, 149, 235); ">BOT</span><br><br><div id="bot_message">Hoe zien de roosters er uit?
+    $my_str ='<span id="icon_bubble" style="background-color: rgb(250, 156, 93);float: right; ">USER</span><br><br><div id="user_message">Hoe zien de roosters er uit?</div>';
+    $sql2 = "INSERT INTO `vragen2`(`vraag`, `user`) VALUES ('$my_str', 'USER')";
+    if ($conn->query($sql2) === TRUE) {
+        header("Location: index.php");
+     } else {
+        echo "Error: " . $sql2 . "<br>" . $conn->error;
+     }
+    $answer = '<span id="icon_bubble" style="background-color: rgb(107, 184, 246); ">BOT</span><br><br><div id="bot_message">Hoe zien de roosters er uit?
     De roosters worden per elke periode vrij gegeven en kunnen soms tussen door gewijzigd worden 
     met eventuele studie dagen of andere evenementen. De student kan zelf de roosters zien op de elo 
     <a href="https://rooster.glu.nl/schedule">HIER</a> 
@@ -24,7 +38,14 @@ if ($question == 2){
 }
 
 if ($question == 3){
-    $answer = '<span id="icon_bubble" style="background-color: rgb(44, 149, 235); ">BOT</span><br><br><div id="bot_message">
+    $my_str ='<span id="icon_bubble" style="background-color: rgb(250, 156, 93);float: right; ">USER</span><br><br><div id="user_message">Hoe zit het met vakanties en/of studiedagen?</div>';
+    $sql2 = "INSERT INTO `vragen2`(`vraag`, `user`) VALUES ('$my_str', 'USER')";
+    if ($conn->query($sql2) === TRUE) {
+        header("Location: index.php");
+     } else {
+        echo "Error: " . $sql2 . "<br>" . $conn->error;
+     }
+    $answer = '<span id="icon_bubble" style="background-color: rgb(107, 184, 246); ">BOT</span><br><br><div id="bot_message">
     Herfstvakantie: 18 oktober tot 24 oktober 2021 <br>
     Kerstvakantie: 27 december 2021 tot 9 januari 2022  <br>
     Voorjaarsvakantie: 28 februari tot 6 maart 2022  <br>
