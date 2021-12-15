@@ -38,38 +38,24 @@
 		<div class='row' >
 			<div class='col-lg-8 col-lg-offset-2'>
 				<div class='col-lg-6 col-lg-offset-3'>
-				<h3>stel een vraag</h3>
-					<hr/>
-					<form name='send' id='send' action='verstuurd2.php' method='post'>
-						<div class='form-group'>
-							<label for='word'>typen:</label>
-							<input name='vraag' id='vraag' type='text' class='form-control' placeholder='live chat' style='cursor:text; background-color:#fff;' onfocus='this.removeAttribute("readonly");' readonly required />
-							<button>vraag</button>
-						</div>
-					</form>
-					<br>
-					standard vragen:
-					<!-- 
-						
-					 -->
 					<form name='standard_question' id='standard_question' action='questions.php' method='post'>
-						<button name='standard_question' id='standard_question' 
+						<button name='standard_question' id='standard_question2' 
 						value="1">
 						wat doe ik als mijn kind ziek is?
 					</button>
 					</form>
 					<form name='standard_question' id='standard_question' action='questions.php' method='post'>
-						<button name='standard_question' id='standard_question' 
+						<button name='standard_question' id='standard_question2' 
 						value="2">
 						hoe zien de roosters er uit?
 					</button>
+					</form>
 					<form name='standard_question' id='standard_question' action='questions.php' method='post'>
-						<button name='standard_question' id='standard_question' 
+						<button name='standard_question' id='standard_question2' 
 						value="3">
 						Hoe zit het met vakanties en/of studiedagen?
 					</button>
 					</form>
-			<hr>
 		<h1 id="header">live chat:</h1>
 	<br>
 <?php
@@ -85,14 +71,16 @@
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		}
+
 	
+
 			$sql = "SELECT * FROM vragen2 ORDER BY id DESC";
 			if ($result = $conn->query($sql)) {
 				$str = "<lu style='list-style-type:none; margin:0; padding:0; margin-top:60px'>";
 				while ($row = $result->fetch_assoc()) {
-			 
 				  $str .= "<li><div style='border:1px gray; margin:3px; padding:2px;  font-size: xx-large;'>" . '</span>' .'<br>' .  $row['vraag'] . "</div></li> <br> <br> <br>";
 				}
+
 				$str .= "</lu>";
 
 			$result->free();
@@ -107,5 +95,14 @@
 			</div>
 		</div>
 	</div>
+	<script src="./script/main.js"></script>
+	
+	<form  name='send' id='send' action='verstuurd2.php' method='post'>
+						<div class='form-group' id='input_g' >
+							<label for='word'></label>
+							<input tabindex="0" autofocus name='vraag' id='vraag' type='text' class='form-control' placeholder='click or type ENTER to focus' onfocus='this.removeAttribute("readonly");' readonly required/>
+							<button id="ask">↩</button>
+						</div>
+					</form>
 </body>
 </html>

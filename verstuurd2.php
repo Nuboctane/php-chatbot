@@ -14,6 +14,8 @@ if ($conn->query($sql) === TRUE) {
 
  } else {
     // Uitvoeren query mislukt
+    header("Location: index.php");
+
     echo "Error: " . $sql . "<br>" . $conn->error;
  }
 
