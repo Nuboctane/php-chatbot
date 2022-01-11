@@ -1,27 +1,17 @@
 <?php
-    include_once 'config/database.php';
-    $db = new Database();
-    $conn = $db->getConnection();
-
+include_once 'config/database.php';
+$db = new Database();
+$conn = $db->getConnection();
 $my_str = strtolower($_POST["word"]);
-
 $sql = "INSERT INTO `vragen`(`vraag`) VALUES ('$my_str', '$_POST[gradatie]')";
-
-// Poging uitvoeren query
-if ($conn->query($sql) === TRUE) {
-    // Uitvoeren query gelukt
+if ($conn->query($sql)===TRUE){
     header("Location: index.php");
-
- } else {
-    // Uitvoeren query mislukt
+}else{
     echo "Error: " . $sql . "<br>" . $conn->error;
- }
+}
 
 $conn->close();
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +23,6 @@ $conn->close();
 <body>
     <div id="container">
         <h1>error</h1>
-        
     </div>
 </body>
 </html>
