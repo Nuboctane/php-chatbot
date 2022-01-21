@@ -1,0 +1,159 @@
+#bot_message {
+    background-color: rgb(107, 184, 246);
+    border-radius: 0px 50px 50px 50px;
+    padding: 15px;
+    width: 25%;
+}
+
+#staff_message {
+    background-color: rgb(144, 238, 144);
+    border-radius: 0px 50px 50px 50px;
+    padding: 15px;
+    width: 45%;
+}
+
+
+#user_message{
+    background-color: rgb(250, 156, 93);
+    border-radius: 50px 0px 50px 50px;
+    padding: 15px;
+    width: 25%;
+    float: right;
+}
+
+#icon_bubble{
+    background-color: rgb(107, 184, 246);
+    border-radius: 100px;
+    padding: 15px;
+}
+
+#chat_list{
+    background-color: rgb(190, 190, 190);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#header{
+    background-color: rgb(190, 190, 190);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#standard_question{
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin:0 0.3em 0.3em 0 ;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+#standard_question2{
+    background: none;
+    border-style: none;
+}
+
+#standard_question:hover{
+    background-color:#4095c6;
+}
+
+#ask{
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    /* margin:0 0.3em 0.3em 0 ; */
+    border-radius:0px 20px 20px 0px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    background-color:#4297c8;
+    text-align:center;
+    transition: all 0.2s;
+    border-style: none;
+    height: 100px;
+    width: 25%;
+    font-size: 50px;
+    float: right;
+}
+
+#ask:hover{
+    background-color:#4095c6;
+}
+
+#vraag{
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    /* margin:0 0.3em 0.3em 0 ; */
+    border-radius:20px 0px 0px 20px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    background-color:#4eb5f1;
+    text-align:left;
+    transition: all 0.2s;
+    border-style: none;
+    height: 100px;
+    width: 75%;
+    font-size: 50px;
+
+}
+
+#vraag2{
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    /* margin:0 0.3em 0.3em 0 ; */
+    border-radius:20px 0px 0px 20px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    background-color:#4ef177;
+    text-align:left;
+    transition: all 0.2s;
+    border-style: none;
+    height: 100px;
+    width: 75%;
+    font-size: 50px;
+
+}
+
+#send2{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+    height: 10%;
+    padding: 10px;
+}
+
+#send{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+    height: 10%;
+    padding: 10px;
+}
+
+#vraag2:hover{
+    background-color:#47aa3a;
+}
+
+
+#vraag:hover{
+    background-color:#4095c6;
+}
+
